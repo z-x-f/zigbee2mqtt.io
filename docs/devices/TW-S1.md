@@ -1,6 +1,6 @@
 ---
 title: "Konke TW-S1 control via MQTT"
-description: "Integrate your Konke TW-S1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Konke TW-S1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-01-31T22:24:43Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TW-S1  |
-| Vendor  | Konke  |
+| Vendor  | [Konke](/supported-devices/#v=Konke)  |
 | Description | Photoelectric smoke detector |
 | Exposes | smoke, battery_low, linkquality |
 | Picture | ![Konke TW-S1](https://www.zigbee2mqtt.io/images/devices/TW-S1.jpg) |
@@ -29,6 +29,7 @@ pageClass: device-page
 ### Important
 Konke devices only work on Zigbee channel 15, 20 and 25.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

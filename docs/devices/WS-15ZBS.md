@@ -1,6 +1,6 @@
 ---
 title: "Climax WS-15ZBS control via MQTT"
-description: "Integrate your Climax WS-15ZBS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Climax WS-15ZBS via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-02-28T13:58:01Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | WS-15ZBS  |
-| Vendor  | Climax  |
+| Vendor  | [Climax](/supported-devices/#v=Climax)  |
 | Description | Water leak sensor |
 | Exposes | water_leak, battery_low, tamper, linkquality |
 | Picture | ![Climax WS-15ZBS](https://www.zigbee2mqtt.io/images/devices/WS-15ZBS.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

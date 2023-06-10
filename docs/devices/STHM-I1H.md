@@ -1,6 +1,6 @@
 ---
 title: "HEIMAN STHM-I1H control via MQTT"
-description: "Integrate your HEIMAN STHM-I1H via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN STHM-I1H via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-02-04T20:38:05Z
 pageClass: device-page
 ---
@@ -16,8 +16,8 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | STHM-I1H  |
-| Vendor  | HEIMAN  |
-| Description | Heiman temperature & humidity sensor |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
+| Description | Temperature & humidity sensor |
 | Exposes | temperature, humidity, battery, linkquality |
 | Picture | ![HEIMAN STHM-I1H](https://www.zigbee2mqtt.io/images/devices/STHM-I1H.jpg) |
 
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -55,7 +56,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `%`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

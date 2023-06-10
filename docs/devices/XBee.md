@@ -1,6 +1,6 @@
 ---
 title: "Digi XBee control via MQTT"
-description: "Integrate your Digi XBee via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Digi XBee via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-04-29T17:11:59Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | XBee  |
-| Vendor  | Digi  |
+| Vendor  | [Digi](/supported-devices/#v=Digi)  |
 | Description | Router |
 | Exposes | linkquality |
 | Picture | ![Digi XBee](https://www.zigbee2mqtt.io/images/devices/XBee.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

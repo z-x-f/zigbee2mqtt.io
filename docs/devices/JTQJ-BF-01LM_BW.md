@@ -1,6 +1,6 @@
 ---
 title: "Xiaomi JTQJ-BF-01LM/BW control via MQTT"
-description: "Integrate your Xiaomi JTQJ-BF-01LM/BW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Xiaomi JTQJ-BF-01LM/BW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -16,10 +16,11 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | JTQJ-BF-01LM/BW  |
-| Vendor  | Xiaomi  |
+| Vendor  | [Xiaomi](/supported-devices/#v=Xiaomi)  |
 | Description | MiJia gas leak detector  |
 | Exposes | gas, battery_low, tamper, sensitivity, gas_density, selftest, linkquality |
 | Picture | ![Xiaomi JTQJ-BF-01LM/BW](https://www.zigbee2mqtt.io/images/devices/JTQJ-BF-01LM-BW.jpg) |
+| White-label | Xiaomi YTC4019RT |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
@@ -42,6 +43,7 @@ A self-test can be trigged by publishing to `zigbee2mqtt/FRIENDLY_NAME/set`
 `{"selftest": ""}`.
 If the selftest is executed successfully you will hear the device beep in 30 seconds.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

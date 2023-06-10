@@ -1,6 +1,6 @@
 ---
 title: "Feibit TZSW22FW-L4 control via MQTT"
-description: "Integrate your Feibit TZSW22FW-L4 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Feibit TZSW22FW-L4 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-12-15T17:27:48Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TZSW22FW-L4  |
-| Vendor  | Feibit  |
+| Vendor  | [Feibit](/supported-devices/#v=Feibit)  |
 | Description | Smart light switch - 2 gang |
 | Exposes | switch (state), linkquality |
 | Picture | ![Feibit TZSW22FW-L4](https://www.zigbee2mqtt.io/images/devices/TZSW22FW-L4.jpg) |
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

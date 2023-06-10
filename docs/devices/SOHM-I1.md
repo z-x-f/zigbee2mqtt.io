@@ -1,6 +1,6 @@
 ---
 title: "HEIMAN SOHM-I1 control via MQTT"
-description: "Integrate your HEIMAN SOHM-I1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN SOHM-I1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-01-14T19:34:25Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SOHM-I1  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Door contact sensor |
 | Exposes | contact, battery_low, tamper, linkquality |
 | Picture | ![HEIMAN SOHM-I1](https://www.zigbee2mqtt.io/images/devices/SOHM-I1.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

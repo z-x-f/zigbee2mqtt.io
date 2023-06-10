@@ -1,6 +1,6 @@
 ---
 title: "Shenzhen Homa HLC614-ZLL control via MQTT"
-description: "Integrate your Shenzhen Homa HLC614-ZLL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Shenzhen Homa HLC614-ZLL via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-04-08T17:49:06Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HLC614-ZLL  |
-| Vendor  | Shenzhen Homa  |
+| Vendor  | [Shenzhen Homa](/supported-devices/#v=Shenzhen%20Homa)  |
 | Description | 3 channel relay module |
 | Exposes | switch (state), linkquality |
 | Picture | ![Shenzhen Homa HLC614-ZLL](https://www.zigbee2mqtt.io/images/devices/HLC614-ZLL.jpg) |
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

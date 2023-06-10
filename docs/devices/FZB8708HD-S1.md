@@ -1,6 +1,6 @@
 ---
 title: "Brimate FZB8708HD-S1 control via MQTT"
-description: "Integrate your Brimate FZB8708HD-S1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Brimate FZB8708HD-S1 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-02-28T13:58:01Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | FZB8708HD-S1  |
-| Vendor  | Brimate  |
+| Vendor  | [Brimate](/supported-devices/#v=Brimate)  |
 | Description | Smart motion sensor |
 | Exposes | occupancy, battery_low, linkquality |
 | Picture | ![Brimate FZB8708HD-S1](https://www.zigbee2mqtt.io/images/devices/FZB8708HD-S1.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

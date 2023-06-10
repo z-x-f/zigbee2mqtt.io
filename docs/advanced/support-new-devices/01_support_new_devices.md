@@ -5,11 +5,11 @@ This page will guide you through the process of adding support for new devices t
 
 In case you require any help feel free to create an [issue](https://github.com/Koenkk/zigbee2mqtt/issues).
 
-**Before** starting, first check if you devices is not already supported in the Zigbee2MQTT dev branch! This can be done by searching on your Zigbee model (see step 1 below) in any of the files [here](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices).
+**Before** starting, first check if your device is not already supported in the Zigbee2MQTT dev branch! This can be done by searching on your Zigbee model (see step 1 below) in any of the files [here](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices).
 
 ## Instructions
 ### 1. Pairing the device with Zigbee2MQTT
-The first step is to pair the device with Zigbee2MQTT. It should be possible to pair your unsupported device out of the box because Zigbee2MQTT can pair with any zigbee device. You need to find out how to bring your device into pairing mode, most of the time via a factory reset.
+The first step is to pair the device with Zigbee2MQTT. It should be possible to pair your unsupported device out of the box because Zigbee2MQTT can pair with any Zigbee device. You need to find out how to bring your device into pairing mode, most of the time via a factory reset.
 
 Once you successfully paired the device you will see something like:
 ```
@@ -60,12 +60,13 @@ Once finished, restart Zigbee2MQTT and trigger some actions on the device. You w
 Zigbee2MQTT:debug  2019-11-09T12:24:22: No converter available for 'WSDCGQ01LM' with cluster 'msTemperatureMeasurement' and type 'attributeReport' and data '{"measuredValue":2512}'
 ```
 
-In case your device is not reporting anything, it could be that this device requires additional configuration. This can be done by adding a `configure:` section. It may help to look at similar [devices](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices).
+If your device is not reporting anything, it could be that this device requires additional configuration. This can be done by adding a `configure:` section. It may help to look at similar [devices](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/devices).
 
 ::: tip
 If your device is advertised as TuYa compatible or reports anything with `manuSpecificTuya` additional instructions for adding your device can be found [here](./02_support_new_tuya_devices.md).
 :::
 
+In case your device does not report anything out of the blue, the Clusters page at Zigbee2MQTT's frontend (found under the device in the dashboard) also exposes the clusters.
 
 Some basic external converter examples:
 - [Bulb (light)](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/light.js)
@@ -74,9 +75,9 @@ Some basic external converter examples:
 - Definitions of already supported devices can be found [here](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/devices). It may help to look at devices from the same vendor or type.
 
 ### 3. Adding converter(s) for your device
-In order to parse the messages of your Zigbee device we need to add converter(s). Probably existing converters can be reused, those can be found [here](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/converters/fromZigbee.js).
+In order to parse the messages of your Zigbee device we need to add converter(s). Existing converters can probably be reused, those can be found [here](https://github.com/Koenkk/zigbee-herdsman-converters/blob/master/src/converters/fromZigbee.js).
 
-For e.g. the following message we could use the already existing [`fz.temperature` converter](https://github.com/Koenkk/zigbee-herdsman-converters/blob/5c069a34beecc9250d642d02e84f2808af1b4fae/converters/fromZigbee.js#L304):
+For e.g. the following message we could use the already existing [`fz.temperature` converter](https://github.com/Koenkk/zigbee-herdsman-converters/blob/e1f8b3c537a99891dfb451734e52bfd2da643a20/src/converters/fromZigbee.js#L372):
 ```
 Zigbee2MQTT:debug  2019-11-09T12:24:22: No converter available for 'WSDCGQ01LM' with cluster 'msTemperatureMeasurement' and type 'attributeReport' and data '{"measuredValue":2512}'
 ```
@@ -96,9 +97,9 @@ const definition = {
     model: 'WSDCGQ01LM',
     vendor: 'Xiaomi',
     description: 'MiJia temperature & humidity sensor',
-    fromZigbee: [fz.temperature], // <-- added here
-    toZigbee: [],
-    exposes: [e.battery(), e.temperature(), e.humidity()],
+    fromZigbee: [fz.temperature], // <-- added here all clusters reported from zigbee
+    toZigbee: [], // <-- add here all clusters to send commands to zigbee
+    exposes: [e.battery(), e.temperature(), e.humidity()], // <-- this will define which fields will be exposed in the definition message to configure a front end (e.g. the z2m frontend, Home Assistant, Domoticz)
 };
 
 module.exports = definition;
@@ -106,18 +107,22 @@ module.exports = definition;
 
 Repeat until your device does not produce any more log messages like: `2018-5-1 18:19:41 WARN No converter available for 'WSDCGQ01LM' with....`
 
-In case you need to add custom converters you can find an external converter example [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.js).
+If none of the existing converters fit you can add custom ones, an external converter example for this can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.js).
 
 #### 3.1 Retrieving color temperature range (only required for lights which support color temperature)
-If your device is a light and supports color temperature you need to define the color temperature range. This range indicates the minimum and maximum color temperature value the light supports. This can be retrieved from the light by sending to `zigbee2mqtt/DEVICE_FRIENDLY_NAME/set` with payload `{"read": {"cluster": "lightingColorCtrl", "attributes": ["colorTempPhysicalMin", "colorTempPhysicalMax"]}}`
+If your device is a light and supports color temperature you need to define the color temperature range. This range indicates the minimum and maximum color temperature values the light supports. This can be retrieved by clicking on your device in the frontend, go to "Dev console". For cluster select `LColorCtrl`, for attribute `colorTempPhysicalMin` and `colorTempPhysicalMax`, after that click on "Read". Now the min/max color temperature will be read as marked below
+
+![colortemp_min_max](../../images/colortemp_min_max.png)
+
+Alternatively this can be retrieved from the light by sending to `zigbee2mqtt/DEVICE_FRIENDLY_NAME/set` with payload `{"read": {"cluster": "lightingColorCtrl", "attributes": ["colorTempPhysicalMin", "colorTempPhysicalMax"]}}`
 
 The result will be logged to the Zigbee2MQTT log, e.g.
 
 ```
-Zigbee2MQTT:info  2021-03-21 21:10:40: Read result of 'lightingColorCtrl': {"colorTempPhysicalMin":153,"colorTempPhysicalMax":500}
+Zigbee2MQTT:info  2021-03-21 21:10:40: Read result of 'lightingColorCtrl': {"colorTempPhysicalMin":153,"colorTempPhysicalMax":454}
 ```
 
-In the above example set `colorTempRange` to `{colorTempRange: [153, 500]}`, e.g.:
+In the above example set `colorTempRange` to `{colorTempRange: [153, 454]}`, e.g.:
 
 ```js
 const definition = {
@@ -125,21 +130,23 @@ const definition = {
     model: 'myModel',
     vendor: 'myVendor',
     description: 'Super bulb',
-    extend: extend.light_onoff_brightness_colortemp({colorTempRange: [153, 500]}), // <---
+    extend: extend.light_onoff_brightness_colortemp({colorTempRange: [153, 454]}), // <---
 },
 ```
-
-In case none of the existing converters fit you can add custom ones, external converter example for this can be found [here](https://github.com/Koenkk/zigbee2mqtt.io/blob/master/docs/externalConvertersExample/freepad_ext.js).
 
 ### 4. Add device picture to zigbee2mqtt.io documentation
 To make sure a picture is available for this device on the supported devices page and in the frontend:
 
 1. Clone [zigbee2mqtt.io](https://github.com/Koenkk/zigbee2mqtt.io)
-2. Optional: Add a markdown file for your device to `docs/devices`, use the `model` property of your definition as the filename.
-3. Add a picture (`.jpg`, 150x150) to `public/images/devices` and link it in file of the previous step.
+2. Add a device picture (`.jpg`, 150x150) to `public/images/devices`.
+3. ***Optional:*** Add a markdown file for your device to `docs/devices`, use the `model` property of your definition as the filename.  Most of the contents of this file will be auto-generated through docgen but you can add your own notes in a notes section. Do not use h1 or h2 heading within "## Notes"-Section.
+>> \<!-- Notes BEGIN --><br>
+>> \## Notes<br>
+>> ...<br>
+>> \<!-- Notes END -->
 4. Create a Pull Request to [zigbee2mqtt.io](https://github.com/Koenkk/zigbee2mqtt.io).
 
 On the next release of Zigbee2MQTT, the documentation will be updated and your device file will be linked in `../../supported-devices.md` automatically.
 
 ### Done!
-Now it's time to submit a pull request to [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) so this device is supported out of the box by Zigbee2MQTT. This can be done by adding the definition to the [vendor file](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/devices) of your device. :smiley:
+Now it's time to submit a pull request to [zigbee-herdsman-converters](https://github.com/Koenkk/zigbee-herdsman-converters) so this device is supported out of the box by Zigbee2MQTT. This can be done by adding the definition to the [vendor file](https://github.com/Koenkk/zigbee-herdsman-converters/tree/master/src/devices) of your device. :smiley:

@@ -1,6 +1,6 @@
 ---
 title: "Swann SWO-MOS1PA control via MQTT"
-description: "Integrate your Swann SWO-MOS1PA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Swann SWO-MOS1PA via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-06-08T17:35:15Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SWO-MOS1PA  |
-| Vendor  | Swann  |
+| Vendor  | [Swann](/supported-devices/#v=Swann)  |
 | Description | Motion and temperature sensor |
 | Exposes | occupancy, battery_low, tamper, linkquality |
 | Picture | ![Swann SWO-MOS1PA](https://www.zigbee2mqtt.io/images/devices/SWO-MOS1PA.jpg) |
@@ -29,6 +29,7 @@ pageClass: device-page
 ### Temperature not supported
 Device is listed as having temperature detection. This feature is still being investigated.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

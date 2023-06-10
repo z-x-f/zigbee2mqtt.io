@@ -1,6 +1,6 @@
 ---
 title: "Oujiabao CR701-YZ control via MQTT"
-description: "Integrate your Oujiabao CR701-YZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Oujiabao CR701-YZ via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | CR701-YZ  |
-| Vendor  | Oujiabao  |
+| Vendor  | [Oujiabao](/supported-devices/#v=Oujiabao)  |
 | Description | Gas and carbon monoxide alarm |
 | Exposes | gas, carbon_monoxide, tamper, battery_low, linkquality |
 | Picture | ![Oujiabao CR701-YZ](https://www.zigbee2mqtt.io/images/devices/CR701-YZ.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

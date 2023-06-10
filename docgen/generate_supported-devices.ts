@@ -1,11 +1,8 @@
 /**
  * This script generates the supported devices page.
  */
-import { devices } from 'zigbee-herdsman-converters';
-import throat from "throat";
-import * as path from "path";
 import { promises as fsp } from "fs";
-import { generatePage, getAddedAt, getImage, normalizeModel } from "./utils";
+import { generatePage, getAddedAt, getImage, normalizeModel, allDefinitions } from "./utils";
 import { imageBaseDir } from "./constants";
 import { resolveDeviceFile } from "./generate_device";
 
@@ -18,9 +15,9 @@ export default async function generate_supportedDevices() {
   } catch(e) {
   }
 
-  let devicesMapped = [...devices];
+  let devicesMapped = [...allDefinitions];
 
-  for (const device of devices) {
+  for (const device of allDefinitions) {
     if (device.whiteLabel) {
       for (const whiteLabel of device.whiteLabel) {
         const whiteLabelDevice = {
@@ -46,7 +43,7 @@ export default async function generate_supportedDevices() {
     const description = d.description || d.whiteLabelOf.description;
     const link = `../devices/${ normalizeModel(baseModel) }.html`;
     const exposes = Array.from(new Set(
-      d.exposes
+      (typeof d.exposes === 'function' ? d.exposes() : d.exposes)
         .map((e) => e.name ? e.name : e.type)
         .filter((e) => e !== 'linkquality' && e !== 'effect'),
     ));

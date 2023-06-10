@@ -1,6 +1,6 @@
 ---
 title: "HEIMAN HS2SW3A/HS2SW3A-N control via MQTT"
-description: "Integrate your HEIMAN HS2SW3A/HS2SW3A-N via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your HEIMAN HS2SW3A/HS2SW3A-N via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-09-30T20:52:56Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HS2SW3A/HS2SW3A-N  |
-| Vendor  | HEIMAN  |
+| Vendor  | [HEIMAN](/supported-devices/#v=HEIMAN)  |
 | Description | Smart switch - 3 gang with neutral wire |
 | Exposes | switch (state), device_temperature, linkquality |
 | Picture | ![HEIMAN HS2SW3A/HS2SW3A-N](https://www.zigbee2mqtt.io/images/devices/HS2SW3A-HS2SW3A-N.jpg) |
@@ -27,6 +27,14 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
+
+* `device_temperature_calibration`: Calibrates the device_temperature value (absolute offset), takes into effect on next report of device. The value must be a number.
 
 
 ## Exposes

@@ -1,6 +1,6 @@
 ---
 title: "LivingWise LVS-SM10ZW control via MQTT"
-description: "Integrate your LivingWise LVS-SM10ZW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LivingWise LVS-SM10ZW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | LVS-SM10ZW  |
-| Vendor  | LivingWise  |
+| Vendor  | [LivingWise](/supported-devices/#v=LivingWise)  |
 | Description | Door or window contact switch |
 | Exposes | contact, battery_low, tamper, linkquality |
 | Picture | ![LivingWise LVS-SM10ZW](https://www.zigbee2mqtt.io/images/devices/LVS-SM10ZW.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

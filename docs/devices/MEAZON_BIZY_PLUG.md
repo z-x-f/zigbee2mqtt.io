@@ -1,6 +1,6 @@
 ---
 title: "Meazon MEAZON_BIZY_PLUG control via MQTT"
-description: "Integrate your Meazon MEAZON_BIZY_PLUG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Meazon MEAZON_BIZY_PLUG via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -16,9 +16,9 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | MEAZON_BIZY_PLUG  |
-| Vendor  | Meazon  |
+| Vendor  | [Meazon](/supported-devices/#v=Meazon)  |
 | Description | Bizy plug meter |
-| Exposes | switch (state), power, voltage, current, linkquality |
+| Exposes | switch (state), power, voltage, current, energy, linkquality |
 | Picture | ![Meazon MEAZON_BIZY_PLUG](https://www.zigbee2mqtt.io/images/devices/MEAZON_BIZY_PLUG.jpg) |
 
 
@@ -40,10 +40,13 @@ devices:
 <!-- Notes END: Do not edit below this line -->
 
 
+
 ## Options
 *[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
 
 * `legacy`: Set to false to disable the legacy integration (highly recommended), will change structure of the published payload (default true). The value must be `true` or `false`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
@@ -70,6 +73,12 @@ Instantaneous measured electrical current.
 Value can be found in the published state on the `current` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `A`.
+
+### Energy (numeric)
+Sum of consumed energy.
+Value can be found in the published state on the `energy` property.
+It's not possible to read (`/get`) or write (`/set`) this value.
+The unit of this value is `kWh`.
 
 ### Linkquality (numeric)
 Link quality (signal strength).

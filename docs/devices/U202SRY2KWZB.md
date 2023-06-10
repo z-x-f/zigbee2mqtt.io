@@ -1,6 +1,6 @@
 ---
 title: "Schneider Electric U202SRY2KWZB control via MQTT"
-description: "Integrate your Schneider Electric U202SRY2KWZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Schneider Electric U202SRY2KWZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-03-16T20:41:09Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | U202SRY2KWZB  |
-| Vendor  | Schneider Electric  |
+| Vendor  | [Schneider Electric](/supported-devices/#v=Schneider%20Electric)  |
 | Description | Ulti 240V 9.1 A 2 gangs relay switch impress switch module, amber LED |
 | Exposes | switch (state), linkquality |
 | Picture | ![Schneider Electric U202SRY2KWZB](https://www.zigbee2mqtt.io/images/devices/U202SRY2KWZB.jpg) |
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

@@ -1,6 +1,6 @@
 ---
 title: "LELLKI JZ-ZB-003 control via MQTT"
-description: "Integrate your LELLKI JZ-ZB-003 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your LELLKI JZ-ZB-003 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-08-01T20:41:55Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | JZ-ZB-003  |
-| Vendor  | LELLKI  |
+| Vendor  | [LELLKI](/supported-devices/#v=LELLKI)  |
 | Description | 3 gang switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![LELLKI JZ-ZB-003](https://www.zigbee2mqtt.io/images/devices/JZ-ZB-003.jpg) |
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

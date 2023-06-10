@@ -1,6 +1,6 @@
 ---
 title: "TuYa TS0601_switch_4_gang control via MQTT"
-description: "Integrate your TuYa TS0601_switch_4_gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your TuYa TS0601_switch_4_gang via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-01-31T22:24:43Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | TS0601_switch_4_gang  |
-| Vendor  | TuYa  |
+| Vendor  | [TuYa](/supported-devices/#v=TuYa)  |
 | Description | 4 gang switch |
 | Exposes | switch (state), linkquality |
 | Picture | ![TuYa TS0601_switch_4_gang](https://www.zigbee2mqtt.io/images/devices/TS0601_switch_4_gang.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: "ROOME HSC1-WD-0 control via MQTT"
-description: "Integrate your ROOME HSC1-WD-0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your ROOME HSC1-WD-0 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-05-30T19:17:03Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | HSC1-WD-0  |
-| Vendor  | ROOME  |
+| Vendor  | [ROOME](/supported-devices/#v=ROOME)  |
 | Description | Door or window contact switch |
 | Exposes | contact, battery_low, tamper, linkquality |
 | Picture | ![ROOME HSC1-WD-0](https://www.zigbee2mqtt.io/images/devices/HSC1-WD-0.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

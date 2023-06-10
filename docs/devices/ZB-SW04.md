@@ -1,6 +1,6 @@
 ---
 title: "eWeLink ZB-SW04 control via MQTT"
-description: "Integrate your eWeLink ZB-SW04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your eWeLink ZB-SW04 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2021-05-30T19:17:03Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZB-SW04  |
-| Vendor  | eWeLink  |
+| Vendor  | [eWeLink](/supported-devices/#v=eWeLink)  |
 | Description | Smart light switch - 4 gang |
 | Exposes | switch (state), linkquality |
 | Picture | ![eWeLink ZB-SW04](https://www.zigbee2mqtt.io/images/devices/ZB-SW04.jpg) |
@@ -27,6 +27,12 @@ pageClass: device-page
 
 <!-- Notes END: Do not edit below this line -->
 
+
+
+## Options
+*[How to use device type specific configuration](../guide/configuration/devices-groups.md#specific-device-options)*
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes

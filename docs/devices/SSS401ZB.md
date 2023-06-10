@@ -1,6 +1,6 @@
 ---
 title: "Feibit SSS401ZB control via MQTT"
-description: "Integrate your Feibit SSS401ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Feibit SSS401ZB via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-04-08T17:49:06Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | SSS401ZB  |
-| Vendor  | Feibit  |
+| Vendor  | [Feibit](/supported-devices/#v=Feibit)  |
 | Description | Smart 4 key scene wall switch |
 | Exposes | action, switch (state), linkquality |
 | Picture | ![Feibit SSS401ZB](https://www.zigbee2mqtt.io/images/devices/SSS401ZB.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

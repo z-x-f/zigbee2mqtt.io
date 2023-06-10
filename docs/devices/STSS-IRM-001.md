@@ -1,6 +1,6 @@
 ---
 title: "SmartThings STSS-IRM-001 control via MQTT"
-description: "Integrate your SmartThings STSS-IRM-001 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your SmartThings STSS-IRM-001 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-11-01T12:47:02Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | STSS-IRM-001  |
-| Vendor  | SmartThings  |
+| Vendor  | [SmartThings](/supported-devices/#v=SmartThings)  |
 | Description | Motion sensor (2013 model) |
 | Exposes | occupancy, battery_low, tamper, linkquality |
 | Picture | ![SmartThings STSS-IRM-001](https://www.zigbee2mqtt.io/images/devices/STSS-IRM-001.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 

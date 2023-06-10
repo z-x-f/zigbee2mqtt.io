@@ -1,6 +1,6 @@
 ---
 title: "Bosch ISW-ZPR1-WP13 control via MQTT"
-description: "Integrate your Bosch ISW-ZPR1-WP13 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Bosch ISW-ZPR1-WP13 via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2019-07-22T20:08:17Z
 pageClass: device-page
 ---
@@ -16,7 +16,7 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ISW-ZPR1-WP13  |
-| Vendor  | Bosch  |
+| Vendor  | [Bosch](/supported-devices/#v=Bosch)  |
 | Description | Motion sensor |
 | Exposes | temperature, battery, occupancy, battery_low, tamper, linkquality |
 | Picture | ![Bosch ISW-ZPR1-WP13](https://www.zigbee2mqtt.io/images/devices/ISW-ZPR1-WP13.jpg) |
@@ -26,6 +26,7 @@ pageClass: device-page
 
 
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -45,7 +46,7 @@ It's not possible to read (`/get`) or write (`/set`) this value.
 The unit of this value is `°C`.
 
 ### Battery (numeric)
-Remaining battery in %.
+Remaining battery in %, can take up to 24 hours before reported..
 Value can be found in the published state on the `battery` property.
 It's not possible to read (`/get`) or write (`/set`) this value.
 The minimal value is `0` and the maximum value is `100`.

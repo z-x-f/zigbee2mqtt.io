@@ -1,6 +1,6 @@
 ---
 title: "Lonsonho ZB-RGBCW control via MQTT"
-description: "Integrate your Lonsonho ZB-RGBCW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendors bridge or gateway."
+description: "Integrate your Lonsonho ZB-RGBCW via Zigbee2MQTT with whatever smart home infrastructure you are using without the vendor's bridge or gateway."
 addedAt: 2020-12-30T11:31:00Z
 pageClass: device-page
 ---
@@ -16,16 +16,22 @@ pageClass: device-page
 |     |     |
 |-----|-----|
 | Model | ZB-RGBCW  |
-| Vendor  | Lonsonho  |
+| Vendor  | [Lonsonho](/supported-devices/#v=Lonsonho)  |
 | Description | Zigbee 3.0 LED-bulb, RGBW LED |
 | Exposes | light (state, brightness, color_temp, color_xy), linkquality |
 | Picture | ![Lonsonho ZB-RGBCW](https://www.zigbee2mqtt.io/images/devices/ZB-RGBCW.jpg) |
 
 
 <!-- Notes BEGIN: You can edit here. Add "## Notes" headline if not already present. -->
+## Notes
 
-
+### Pairing
+1. Switch on your device.
+2. Now switch off and back on within 2 seconds.
+3. Repeat off/on four more times.
+4. Reset is done when the device is switched on the fifth time and the light starts pulsing.
 <!-- Notes END: Do not edit below this line -->
+
 
 
 ## Options
@@ -34,6 +40,8 @@ pageClass: device-page
 * `transition`: Controls the transition time (in seconds) of on/off, brightness, color temperature (if applicable) and color (if applicable) changes. Defaults to `0` (no transition). The value must be a number with a minimum value of `0`
 
 * `color_sync`: When enabled colors will be synced, e.g. if the light supports both color x/y and color temperature a conversion from color x/y to color temperature will be done when setting the x/y color (default true). The value must be `true` or `false`
+
+* `state_action`: State actions will also be published as 'action' when true (default false). The value must be `true` or `false`
 
 
 ## Exposes
